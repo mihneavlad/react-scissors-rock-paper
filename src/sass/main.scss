@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+$custom-sans-serif: "Josefin", sans;
+
+$font-family-base:       $custom-sans-serif;
+$headings-font-family:   $custom-sans-serif;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+.container {
+  min-height: 100vh;
+}
