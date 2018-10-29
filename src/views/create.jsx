@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import "../css/main.css";
 
 
-const Create = () => {
+const Game = () => {
   return (
     <Fragment>
       <div className="container d-flex m-auto">
@@ -24,4 +24,4 @@ const Create = () => {
   );
 }
 
-export default Create;
+export default Game;
