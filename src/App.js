@@ -1,32 +1,38 @@
-import React, { Component, Fragment } from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import React, { Component } from 'react';
+import './css/main.css';
 
-import "./css/main.css";
+// stateless component
 
+const PlayerCard = ({color, symbol}) => {
 
-import Contacts from './views/contacts';
-import Create from './views/create';
-import Login from './views/login';
-import Signup from './views/signup';
+	const style = {
+		backgroundColor: color
+	}
+
+	return (
+		<div style={style} className="player-card">
+			{symbol}
+		</div>
+	)
+}
 
 class App extends Component {
-  render() {
-      return  (
-          <BrowserRouter className="mainc">
-            <Fragment>
-              <main>
-                <Switch>
-                  <Route exact path="/contacts" component={Contacts} />
-                  <Route exact path="/create" component={Create} />
-                  <Route exact path="/login" component={Login} />
-                  <Route exact path="/signup" component={Signup} />
-                  {/* <Route component={NotFound} /> */}
-                </Switch>
-              </main>
-            </Fragment>
-          </BrowserRouter>
-      );
-    }
+
+	
+	render() {
+		return (
+			<div className="App">
+				<PlayerCard
+					color="red"
+					symbol="paper"
+				/>
+				<PlayerCard
+					color="blue"
+					symbol="paper"
+				/>
+			</div>
+		);
+	}
 }
 
 export default App;
