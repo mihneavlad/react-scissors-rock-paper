@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import './css/main.css';
 
 // stateless component
@@ -28,7 +28,7 @@ class App extends Component {
 		if (player1 === player2) {
 			return "It's a draw!"
 		}
-		if(
+		else if(
 			(player1 === "rock" && player2 ==="scissors") ||
 			(player1 === "scissors" && player2 ==="paper") ||
 			(player1 === "paper" && player2 ==="rock")
@@ -54,7 +54,7 @@ class App extends Component {
 
 			if(counter > 15) {
 				clearInterval(shuffle);
-				this.setState({winner: this.decideWinner})
+				this.setState({winner: this.decideWinner()})
 			}
 		}, 100)
 	}
@@ -62,6 +62,8 @@ class App extends Component {
 	render() {
 		return (
 				<div className="App">
+					{/* <h4 className="text-center">{this.state.winner}</h4> */}
+					<button>{this.state.winner}</button>
 					<PlayerCard
 						color="red"
 						symbol={this.state.player1}
@@ -70,7 +72,6 @@ class App extends Component {
 						color="blue"
 						symbol={this.state.player2}
 					/>
-					<p>{this.state.winner}</p>
 					<button onClick={this.playGame}>Play Game</button>
 				</div>
 		);
