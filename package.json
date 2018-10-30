@@ -1,6 +1,7 @@
 {
   "name": "react-scissors-rock-paper",
   "version": "0.1.0",
+  "author": "Mihnea Vlad",
   "private": true,
   "dependencies": {
     "boostrap": "^2.0.0",
