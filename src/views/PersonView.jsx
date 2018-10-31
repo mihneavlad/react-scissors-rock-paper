@@ -16,7 +16,7 @@ class PersonView extends Component {
 					<div className="d-flex">
 						{symbols.map((symbol, index) =>
 							<Row className="m-auto three-buttons" key={index}>
-								<Col sm="3">
+								<Col>
 									<Link to={`/gameview/${symbol}`}>
 									<PlayerCard
 										color="blue"
@@ -27,7 +27,7 @@ class PersonView extends Component {
 							</Row>
 						)}
 					</div>
-					<h4 className="text-center">You are the blue player! Choose your symbol!</h4>
+					<h4 className="text-center">You are the blue player! Choose your shape!</h4>
 				</div>
 			</Fragment>
 		);

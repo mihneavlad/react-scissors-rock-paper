@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/main.css';
-
+import {Link} from "react-router-dom";
 import PlayerCard from '../components/PlayerCard';
 
 class GameView extends Component {
@@ -13,7 +13,7 @@ class GameView extends Component {
 
 	componentDidMount() {
 		this.setState({
-			player2: this.props.match.params.sign
+			player1: this.props.match.params.sign
 		})
 	}
 
@@ -28,10 +28,10 @@ class GameView extends Component {
 			(player1 === "scissors" && player2 ==="paper") ||
 			(player1 === "paper" && player2 ==="rock")
 			) {
-			return "Computer wins!"
+			return "You win!"
 		}
 
-		return "You win!"
+		return "Computer wins!"
 
 	}
 
@@ -42,7 +42,7 @@ class GameView extends Component {
 		let shuffle = setInterval(() => {
 			counter++
 			this.setState({
-				player1: this.symbols[Math.floor(Math.random() * 3)],
+				player2: this.symbols[Math.floor(Math.random() * 3)],
 				winner: ""
 			})
 
@@ -61,14 +61,19 @@ class GameView extends Component {
 							  <div className="game">
 								<h4 className="text-center">{this.state.winner}</h4>
 								<PlayerCard
-									color="red"
+									color="blue"
+
 									symbol={this.state.player1}
 								/>
 								<PlayerCard
-									color="blue"
+									color="red"
+									className="computer"
 									symbol={this.state.player2}
 								/>
 								<button onClick={this.playGame}>Check the Outcome!</button>
+								<Link to="/personview" className="btn btn-light">
+			            Choose a different shape!
+			          </Link>
 								<h4 className="text-center1">{this.state.winner}</h4>
               </div>
 						</div>

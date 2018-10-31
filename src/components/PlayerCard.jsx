@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PlayerCard = ({color, symbol}) => {
+const PlayerCard = ({color, symbol, className}) => {
 	const style = {
 		backgroundColor: color,
 		backgroundImage: `url(/img/${symbol}.png)`
@@ -8,7 +8,7 @@ const PlayerCard = ({color, symbol}) => {
 	console.log(style)
 
 	return (
-		<div style={style} className="player-card"></div>
+		<div style={style} className={`player-card ${className}`}></div>
 	)
 }
 
