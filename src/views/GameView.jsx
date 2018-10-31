@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import '../css/main.css';
 
 const PlayerCard = ({color, symbol}) => {
-
 	const style = {
 		backgroundColor: color,
-		backgroundImage: "url(./img/" + symbol + ".png)"
+		backgroundImage: `url(/img/${symbol}.png)`
 	}
+	console.log(style)
 
 	return (
 		<div style={style} className="player-card"></div>
