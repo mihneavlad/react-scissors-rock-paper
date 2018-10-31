@@ -4,7 +4,6 @@ import './css/main.css';
 
 import Home from './views/Home';
 import GameView from './views/GameView';
-import PersonView from './views/PersonView';
 
 
 class App extends Component {
@@ -17,7 +16,6 @@ class App extends Component {
 						<Switch>
 							<Route exact path="/" component={Home} />
 							<Route exact path="/gameview" component={GameView} />
-							<Route exact path="/personview" component={PersonView} />
 						</Switch>
 					</main>
 				</Fragment>
