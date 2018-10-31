@@ -2,9 +2,6 @@ import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
 import hero from '../hero.jpg';
 
-
-
-
 const Home = (props) => (
 
     <Fragment>

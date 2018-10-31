@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
 import '../css/main.css';
 
-const PlayerCard = ({color, symbol}) => {
-	const style = {
-		backgroundColor: color,
-		backgroundImage: `url(/img/${symbol}.png)`
-	}
-	console.log(style)
-
-	return (
-		<div style={style} className="player-card"></div>
-	)
-}
+import PlayerCard from '../components/PlayerCard';
 
 class GameView extends Component {
 
@@ -38,10 +28,10 @@ class GameView extends Component {
 			(player1 === "scissors" && player2 ==="paper") ||
 			(player1 === "paper" && player2 ==="rock")
 			) {
-			return "Player 1 is the winner!"
+			return "Computer wins!"
 		}
 
-		return "Player 2 is the winner!"
+		return "You win!"
 
 	}
 
@@ -78,7 +68,7 @@ class GameView extends Component {
 									color="blue"
 									symbol={this.state.player2}
 								/>
-								<button onClick={this.playGame}>Play Game</button>
+								<button onClick={this.playGame}>Check the Outcome!</button>
 								<h4 className="text-center1">{this.state.winner}</h4>
               </div>
 						</div>

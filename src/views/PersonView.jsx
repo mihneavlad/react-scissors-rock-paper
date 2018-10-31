@@ -3,39 +3,32 @@ import '../css/main.css';
 import {Link} from "react-router-dom";
 import { Col, Row} from 'reactstrap';
 
-
-const PlayerCard = ({color, symbol}) => {
-
-	const style = {
-		backgroundColor: color,
-		backgroundImage: `url(/img/${symbol}.png)`
-	}
-
-	return (
-		<div style={style} className="player-card"></div>
-	)
-}
+import PlayerCard from '../components/PlayerCard';
 
 const symbols = ["scissors", "rock", "paper"];
 
 
 class PersonView extends Component {
-
 	render() {
 		return (
 			<Fragment>
-				{symbols.map((symbol, index) =>
-					<Row key={index}>
-						<Col sm="3">
-							<Link to={`/gameview/${symbol}`}>
-							<PlayerCard
-								color="blue"
-								symbol={symbol}
-							/>
-							</Link>
-						</Col>
-					</Row>
-				)}
+				<div className="game-container">
+					<div className="d-flex">
+						{symbols.map((symbol, index) =>
+							<Row className="m-auto three-buttons" key={index}>
+								<Col sm="3">
+									<Link to={`/gameview/${symbol}`}>
+									<PlayerCard
+										color="blue"
+										symbol={symbol}
+									/>
+									</Link>
+								</Col>
+							</Row>
+						)}
+					</div>
+					<h4 className="text-center">You are the blue player! Choose your symbol!</h4>
+				</div>
 			</Fragment>
 		);
 	}
