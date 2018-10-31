@@ -10,7 +10,7 @@ const Home = (props) => (
     <Fragment>
       <div className="intro-page d-flex">
         <div className="m-auto">
-          <Link to="/gameview" className="btn btn-light">
+          <Link to="/personview" className="btn btn-light">
             Scissors, Rock or Paper?
           </Link>
 

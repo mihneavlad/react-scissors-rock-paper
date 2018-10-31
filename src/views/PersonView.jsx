@@ -21,22 +21,18 @@ const symbols = ["scissors", "rock", "paper"];
 
 class PersonView extends Component {
 
-	constructor(props) {
-		super(props)
-		this.symbols = ["scissors", "rock", "paper"];
-		this.state = {};
-	}
-
 	render() {
 		return (
 			<Fragment>
 				{symbols.map((symbol, index) =>
-					<Row>
-						<Col key={index} sm="3">
+					<Row key={index}>
+						<Col sm="3">
+							<Link to={`/gameview/${symbol}`}>
 							<PlayerCard
 								color="blue"
 								symbol={symbol}
 							/>
+							</Link>
 						</Col>
 					</Row>
 				)}

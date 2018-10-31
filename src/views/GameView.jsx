@@ -21,6 +21,12 @@ class GameView extends Component {
 		this.state = {};
 	}
 
+	componentDidMount() {
+		this.setState({
+			player2: this.props.match.params.sign
+		})
+	}
+
 	decideWinner = () => {
 		const {player1, player2} = this.state;
 		if (player1 === player2) {
@@ -47,11 +53,11 @@ class GameView extends Component {
 			counter++
 			this.setState({
 				player1: this.symbols[Math.floor(Math.random() * 3)],
-				player2: this.symbols[Math.floor(Math.random() * 3)],
 				winner: ""
 			})
 
 			if(counter > 15) {
+				console.log(this.state);
 				clearInterval(shuffle);
 				this.setState({winner: this.decideWinner()})
 			}
@@ -59,6 +65,7 @@ class GameView extends Component {
 	}
 
 	render() {
+
 		return (
 						<div className="game-container d-flex my-auto">
 							  <div className="game">
