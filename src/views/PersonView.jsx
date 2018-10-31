@@ -21,7 +21,6 @@ class PersonView extends Component {
 		this.state = {};
 	}
 
-
 	render() {
 		return (
 						<div className="game-container d-flex my-auto">
@@ -30,7 +29,7 @@ class PersonView extends Component {
 									symbol={this.symbols[0]}
 								/>
 								<PlayerCard
-									color="red"
+									color="blue"
 									symbol={this.symbols[1]}
 								/>
 								<PlayerCard
