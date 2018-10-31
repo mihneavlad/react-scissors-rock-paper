@@ -2,6 +2,9 @@ import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
 import hero from '../hero.jpg';
 
+
+
+
 const Home = (props) => (
 
     <Fragment>
@@ -10,6 +13,7 @@ const Home = (props) => (
           <Link to="/gameview" className="btn btn-light">
             Scissors, Rock or Paper?
           </Link>
+
         </div>
       </div>
     </Fragment>

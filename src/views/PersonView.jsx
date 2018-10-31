@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import '../css/main.css';
+import {Link} from "react-router-dom";
+import { Col, Row} from 'reactstrap';
+
 
 const PlayerCard = ({color, symbol}) => {
 
@@ -13,6 +16,9 @@ const PlayerCard = ({color, symbol}) => {
 	)
 }
 
+const symbols = ["scissors", "rock", "paper"];
+
+
 class PersonView extends Component {
 
 	constructor(props) {
@@ -23,21 +29,18 @@ class PersonView extends Component {
 
 	render() {
 		return (
-						<div className="game-container d-flex my-auto">
-            		<PlayerCard
-									color="red"
-									symbol={this.symbols[0]}
-								/>
-								<PlayerCard
-									color="blue"
-									symbol={this.symbols[1]}
-								/>
-								<PlayerCard
-									color="red"
-									symbol={this.symbols[2]}
-								/>
-						</div>
-
+			<Fragment>
+				{symbols.map((symbol, index) =>
+					<Row>
+						<Col key={index} sm="3">
+							<PlayerCard
+								color="blue"
+								symbol={symbol}
+							/>
+						</Col>
+					</Row>
+				)}
+			</Fragment>
 		);
 	}
 }
