@@ -13,15 +13,16 @@ $headings-font-family:   $custom-sans-serif;
 }
 
 * {
-	background-color: #0bb;
+	// background-color: #0bb;
 	font-family: sans-serif;
-	color: #fff;
+	// color: #fff;
 }
 
 body {
-	width: 40rem;
+	// width: 40rem;
+	min-height: 100vh;
 	border: 2px solid #088;
-	margin: 1rem auto;
+	margin: auto;
 	display: flex;
 	justify-content: space-evenly;
 }
@@ -74,3 +75,22 @@ p {
 p, button {
 	font-size: 1.25rem;
 }
+
+.intro-page {
+  background-color: green;
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.main-intro {
+  background-color: red;
+}
+
+.game  {
+  margin: auto;
+}
+
+.game-container {
+  min-height: 100vh;
+  }
