@@ -1,9 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Spicy+Rice');
 
-$custom-sans-serif: "Josefin", sans;
-
-$font-family-base:       $custom-sans-serif;
-$headings-font-family:   $custom-sans-serif;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -13,13 +9,14 @@ $headings-font-family:   $custom-sans-serif;
 }
 
 * {
-	// background-color: #0bb;
-	font-family: sans-serif;
-	// color: #fff;
+	font-family: 'Spicy Rice', cursive;
+}
+
+#root {
+  width: 100%;
 }
 
 body {
-	// width: 40rem;
 	min-height: 100vh;
 	border: 2px solid #088;
 	margin: auto;
@@ -28,8 +25,8 @@ body {
 }
 
 .player-card {
-	width: 12.5rem;
-	height: 12.5rem;
+	width: 15rem;
+	height: 15rem;
 	margin: 1.25rem;
 	border-radius: 50%;
 	background-color: #ddd;
@@ -53,7 +50,9 @@ body {
 }
 
 button {
-	width: 25rem;
+  background-color: transparent;
+  color: rgb(33, 37, 41);
+	width: 30rem;
 	border: 2px solid #fff;
 	margin: 1.25rem auto;
 	cursor: pointer;
@@ -63,8 +62,15 @@ button {
 }
 
 button:hover {
-	background-color: #0cc;
+	background-color: rgba(211, 211, 211, 0.7);
 	transition : all 200ms ease-out;
+}
+
+.btn-light {
+  width: 30rem;
+  background-color: rgba(211, 211, 211, 0.7);
+  color: rgb(33, 37, 41);
+  font-size: 2.5rem;
 }
 
 p {
@@ -72,12 +78,20 @@ p {
 	min-height: 3.75rem;
 }
 
-p, button {
-	font-size: 1.25rem;
+p, h4 {
+  font-size: 2.5rem;
+  margin: 1.25rem;
 }
 
+p, button {
+	font-size: 2.5rem;
+}
+
+
 .intro-page {
-  background-color: green;
+  background-image: url("../hero.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
   width: 100%;
   min-height: 100vh;
   margin: auto;
@@ -93,4 +107,15 @@ p, button {
 
 .game-container {
   min-height: 100vh;
+  background-image: url("../hero.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
   }
+
+.text-center {
+    font-family: 'Spicy Rice', cursive;
+  }
+
+.text-center1 {
+  opacity: 0;
+}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+@import url("https://fonts.googleapis.com/css?family=Spicy+Rice");
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -56,7 +56,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Josefin", sans;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -301,7 +301,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Josefin", sans;
+  font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
   color: inherit; }
@@ -3867,7 +3867,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Josefin", sans;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -3952,7 +3952,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Josefin", sans;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6317,7 +6317,10 @@ a.text-dark:hover, a.text-dark:focus {
   min-height: 100vh; }
 
 * {
-  font-family: sans-serif; }
+  font-family: 'Spicy Rice', cursive; }
+
+#root {
+  width: 100%; }
 
 body {
   min-height: 100vh;
@@ -6327,8 +6330,8 @@ body {
   justify-content: space-evenly; }
 
 .player-card {
-  width: 12.5rem;
-  height: 12.5rem;
+  width: 15rem;
+  height: 15rem;
   margin: 1.25rem;
   border-radius: 50%;
   background-color: #ddd;
@@ -6350,7 +6353,9 @@ body {
   -ms-filter: "FlipH"; }
 
 button {
-  width: 25rem;
+  background-color: transparent;
+  color: #212529;
+  width: 30rem;
   border: 2px solid #fff;
   margin: 1.25rem auto;
   cursor: pointer;
@@ -6359,18 +6364,30 @@ button {
   padding: 1rem; }
 
 button:hover {
-  background-color: #0cc;
+  background-color: rgba(211, 211, 211, 0.7);
   transition: all 200ms ease-out; }
+
+.btn-light {
+  width: 30rem;
+  background-color: rgba(211, 211, 211, 0.7);
+  color: #212529;
+  font-size: 2.5rem; }
 
 p {
   text-align: center;
   min-height: 3.75rem; }
 
+p, h4 {
+  font-size: 2.5rem;
+  margin: 1.25rem; }
+
 p, button {
-  font-size: 1.25rem; }
+  font-size: 2.5rem; }
 
 .intro-page {
-  background-color: green;
+  background-image: url("../hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   min-height: 100vh;
   margin: auto; }
@@ -6382,4 +6399,13 @@ p, button {
   margin: auto; }
 
 .game-container {
-  min-height: 100vh; }
+  min-height: 100vh;
+  background-image: url("../hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.text-center {
+  font-family: 'Spicy Rice', cursive; }
+
+.text-center1 {
+  opacity: 0; }

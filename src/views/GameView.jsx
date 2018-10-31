@@ -61,9 +61,8 @@ class GameView extends Component {
 	render() {
 		return (
 						<div className="game-container d-flex my-auto">
-              <div className="game">
-								{/* <h4 className="text-center">{this.state.winner}</h4> */}
-								<button>{this.state.winner}</button>
+							  <div className="game">
+								<h4 className="text-center">{this.state.winner}</h4>
 								<PlayerCard
 									color="red"
 									symbol={this.state.player1}
@@ -73,6 +72,7 @@ class GameView extends Component {
 									symbol={this.state.player2}
 								/>
 								<button onClick={this.playGame}>Play Game</button>
+								<h4 className="text-center1">{this.state.winner}</h4>
               </div>
 						</div>
 
