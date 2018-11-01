@@ -7,7 +7,6 @@ import GameView from './views/GameView';
 import PersonView from './views/PersonView';
 
 class App extends Component {
-
 	render() {
 		return (
 			<BrowserRouter className="mainc">

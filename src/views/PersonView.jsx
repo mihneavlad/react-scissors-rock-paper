@@ -7,7 +7,6 @@ import PlayerCard from '../components/PlayerCard';
 
 const symbols = ["scissors", "rock", "paper"];
 
-
 class PersonView extends Component {
 	render() {
 		return (

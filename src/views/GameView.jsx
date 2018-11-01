@@ -11,11 +11,14 @@ class GameView extends Component {
 		this.state = {};
 	}
 
+	// React Router sign from URL link
 	componentDidMount() {
 		this.setState({
 			player1: this.props.match.params.sign
 		})
 	}
+
+	// Game logic
 
 	decideWinner = () => {
 		const {player1, player2} = this.state;
@@ -35,6 +38,8 @@ class GameView extends Component {
 
 	}
 
+	// Setting state 15 times for the shuffle effect
+
 	playGame = () => {
 
 		let counter = 0
@@ -47,7 +52,6 @@ class GameView extends Component {
 			})
 
 			if(counter > 15) {
-				console.log(this.state);
 				clearInterval(shuffle);
 				this.setState({winner: this.decideWinner()})
 			}
@@ -55,14 +59,12 @@ class GameView extends Component {
 	}
 
 	render() {
-
 		return (
 						<div className="game-container d-flex my-auto">
 							  <div className="game">
 								<h4 className="text-center">{this.state.winner}</h4>
 								<PlayerCard
 									color="blue"
-
 									symbol={this.state.player1}
 								/>
 								<PlayerCard
@@ -77,7 +79,6 @@ class GameView extends Component {
 								<h4 className="text-center1">{this.state.winner}</h4>
               </div>
 						</div>
-
 		);
 	}
 }
