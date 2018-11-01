@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
 import '../css/main.css';
-
-const PlayerCard = ({color, symbol}) => {
-
-	const style = {
-		backgroundColor: color,
-		backgroundImage: "url(./img/" + symbol + ".png)"
-	}
-
-	return (
-		<div style={style} className="player-card"></div>
-	)
-}
+import {Link} from "react-router-dom";
+import PlayerCard from '../components/PlayerCard';
 
 class GameView extends Component {
 
@@ -19,6 +9,12 @@ class GameView extends Component {
 		super(props)
 		this.symbols = ["scissors", "rock", "paper"];
 		this.state = {};
+	}
+
+	componentDidMount() {
+		this.setState({
+			player1: this.props.match.params.sign
+		})
 	}
 
 	decideWinner = () => {
@@ -32,10 +28,10 @@ class GameView extends Component {
 			(player1 === "scissors" && player2 ==="paper") ||
 			(player1 === "paper" && player2 ==="rock")
 			) {
-			return "Player 1 is the winner!"
+			return "You win!"
 		}
 
-		return "Player 2 is the winner!"
+		return "Computer wins!"
 
 	}
 
@@ -46,12 +42,12 @@ class GameView extends Component {
 		let shuffle = setInterval(() => {
 			counter++
 			this.setState({
-				player1: this.symbols[Math.floor(Math.random() * 3)],
 				player2: this.symbols[Math.floor(Math.random() * 3)],
 				winner: ""
 			})
 
 			if(counter > 15) {
+				console.log(this.state);
 				clearInterval(shuffle);
 				this.setState({winner: this.decideWinner()})
 			}
@@ -59,19 +55,25 @@ class GameView extends Component {
 	}
 
 	render() {
+
 		return (
 						<div className="game-container d-flex my-auto">
 							  <div className="game">
 								<h4 className="text-center">{this.state.winner}</h4>
 								<PlayerCard
-									color="red"
+									color="blue"
+
 									symbol={this.state.player1}
 								/>
 								<PlayerCard
-									color="blue"
+									color="red"
+									className="computer"
 									symbol={this.state.player2}
 								/>
-								<button onClick={this.playGame}>Play Game</button>
+								<button onClick={this.playGame}>Check the Outcome!</button>
+								<Link to="/personview" className="btn btn-light">
+			            Choose a different shape!
+			          </Link>
 								<h4 className="text-center1">{this.state.winner}</h4>
               </div>
 						</div>
