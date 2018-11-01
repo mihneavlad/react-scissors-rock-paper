@@ -4,7 +4,7 @@ import './css/main.css';
 
 import Home from './views/Home';
 import GameView from './views/GameView';
-
+import PersonView from './views/PersonView';
 
 class App extends Component {
 
