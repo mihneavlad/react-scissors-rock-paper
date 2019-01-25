@@ -21,6 +21,10 @@ npm run start
 ```
 ![Screenshot](rsp-2.jpg)
 
+## Features
+
+Play against the Computer, choose at anytime a different symbol.
+
 ### Author
 
 Mihnea Vlad
