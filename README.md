@@ -1,4 +1,4 @@
-# One of my favorite pasttime games turned into a web app
+# One of my favorite pastime games turned into a web app
 
 ![Screenshot](rsp-1.jpg)
 
